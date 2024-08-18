@@ -9,11 +9,76 @@
         <link rel="stylesheet" href="./css/output.css">
         <link rel="stylesheet"
                 href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+        <style>
+                img,
+                svg {
+                        max-width: 100%;
+                        height: auto;
+                }
+
+                /* Responsive adjustments */
+                @media (max-width: 768px) {
+                        .container {
+                                flex-direction: column;
+                        }
+
+                        .first,
+                        .second,
+                        .third {
+                                width: 100%;
+                                padding: 0 10px;
+                        }
+
+                        .second {
+                                width: 100%;
+                                border: none;
+                        }
+
+                        .sidebar ul {
+                                width: 100%;
+                                flex-direction: row;
+                                flex-wrap: wrap;
+                                justify-content: space-around;
+                        }
+
+                        .sidebar li {
+                                width: auto;
+                                flex: 1 1 auto;
+                                justify-content: center;
+                        }
+
+                        .second .top .left,
+                        .second .top .right {
+                                width: 100%;
+                                text-align: center;
+                        }
+
+                        .post-btn {
+                                width: 100%;
+                        }
+
+                        .whats,
+                        .who {
+                                width: 100%;
+                        }
+
+                        input[type="search"],
+                        input[type="text"] {
+                                width: 100%;
+                        }
+
+                        .search,
+                        .whats,
+                        .who {
+                                margin: 0;
+                        }
+                }
+        </style>
 </head>
 
 <body class="bg-black text-white">
-        <div class="flex container mx-auto my-4">
-                <div class="first w-[75%]">
+        <div class="flex container mx-auto">
+                <div class="first w-full">
                         <div class="logo invert my-4">
                                 <svg class="w-10 mx-auto" xmlns="http://www.w3.org/2000/svg"
                                         shape-rendering="geometricPrecision" text-rendering="geometricPrecision"
@@ -24,50 +89,67 @@
                                 </svg>
                         </div>
 
-                        <div class="sidebar flex justify-end">
+                        <div class="sidebar flex items-end flex-col">
                                 <ul class="flex flex-col text-xl space-y-3 w-1/2">
                                         <li
                                                 class="flex justify-start items-center gap-3 hover:bg-gray-900 hover:cursor-pointer px-4 py-3 hover: rounded-full">
                                                 <span class="material-symbols-outlined">home
-                                                </span> Home
+                                                </span><span class="hidden md:block"> Home</span>
                                         </li>
                                         <li
                                                 class="flex justify-start items-center gap-3 hover:bg-gray-900 hover:cursor-pointer px-4 py-3 hover: rounded-full">
-                                                <span class="material-symbols-outlined">search</span> Explore
+                                                <span class="material-symbols-outlined">search</span><span
+                                                        class="hidden md:block">
+                                                        Explore</span>
                                         </li>
                                         <li
                                                 class="flex justify-start items-center gap-3 hover:bg-gray-900 hover:cursor-pointer px-4 py-3 hover: rounded-full">
-                                                <span class="material-symbols-outlined">notifications</span>
-                                                Notifications
+                                                <span class="material-symbols-outlined">notifications</span><span
+                                                        class="hidden md:block">
+                                                        Notifications</span>
                                         </li>
                                         <li
                                                 class="flex justify-start items-center gap-3 hover:bg-gray-900 hover:cursor-pointer px-4 py-3 hover: rounded-full">
-                                                <span class="material-symbols-outlined">chat_bubble</span> Messages
+                                                <span class="material-symbols-outlined">chat_bubble</span><span
+                                                        class="hidden md:block">
+                                                        Messages</span>
                                         </li>
                                         <!-- <li class="flex justify-start items-center gap-3 hover:bg-gray-900 hover:cursor-pointer px-4 py-3 hover: rounded-fullli> -->
                                         <li
                                                 class="flex justify-start items-center gap-3 hover:bg-gray-900 hover:cursor-pointer px-4 py-3 hover: rounded-full">
-                                                <span class="material-symbols-outlined">list</span> Lists
+                                                <span class="material-symbols-outlined">list</span><span
+                                                        class="hidden md:block">
+                                                        Lists</span>
                                         </li>
                                         <li
                                                 class="flex justify-start items-center gap-3 hover:bg-gray-900 hover:cursor-pointer px-4 py-3 hover: rounded-full">
-                                                <span class="material-symbols-outlined">bookmarks</span> Bookmarks
+                                                <span class="material-symbols-outlined">bookmarks</span><span
+                                                        class="hidden md:block">
+                                                        Bookmarks</span>
                                         </li>
                                         <li
                                                 class="flex justify-start items-center gap-3 hover:bg-gray-900 hover:cursor-pointer px-4 py-3 hover: rounded-full">
-                                                <span class="material-symbols-outlined">group</span> Communities
+                                                <span class="material-symbols-outlined">group</span><span
+                                                        class="hidden md:block">
+                                                        Communities</span>
                                         </li>
                                         <li
                                                 class="flex justify-start items-center gap-3 hover:bg-gray-900 hover:cursor-pointer px-4 py-3 hover: rounded-full">
-                                                <span class="material-symbols-outlined">license</span> Premium
+                                                <span class="material-symbols-outlined">license</span><span
+                                                        class="hidden md:block">
+                                                        Premium</span>
                                         </li>
                                         <li
                                                 class="flex justify-start items-center gap-3 hover:bg-gray-900 hover:cursor-pointer px-4 py-3 hover: rounded-full">
-                                                <span class="material-symbols-outlined">person</span> Profile
+                                                <span class="material-symbols-outlined">person</span><span
+                                                        class="hidden md:block">
+                                                        Profile</span>
                                         </li>
                                         <li
                                                 class="flex justify-start items-center gap-3 hover:bg-gray-900 hover:cursor-pointer px-4 py-3 hover: rounded-full">
-                                                <span class="material-symbols-outlined">tune</span> More
+                                                <span class="material-symbols-outlined">more</span><span
+                                                        class="hidden md:block">
+                                                        More</span>
                                         </li>
                                         <div
                                                 class="post-btn flex justify-center bg-blue-600 mx-2 px-2 py-2 rounded-full">
@@ -77,8 +159,336 @@
                         </div>
                 </div>
 
-                <div class="second w-full border border-x-white border-y-black">
+                <div class="second w-[130%] border border-x-white border-y-black">
+                        <div class="top flex p-3 relative items-center justify-center">
+                                <div class="left w-1/2 flex justify-center font-bold text-lg">For You</div>
+                                <div class="right w-1/2 flex justify-center font-bold text-lg">Following</div>
+                                <div class="settings mx-2"><span class="material-symbols-outlined">settings</span></div>
+                        </div>
+                        <hr>
+                        <div class="for-you flex gap-2">
+                                <div class="profile-img my-5 mx-2 ">
+                                        <img src="https://pbs.twimg.com/profile_images/1629703174146736128/FyJ5XBWJ_normal.jpg"
+                                                alt="" class="rounded-full">
+                                </div>
+                                <div class="w-full mx-2">
+                                        <input type="text" placeholder="What's Happening?"
+                                                class="bg-[#16181c] text-white outline-none w-full h-10 my-5 px-2 py-5 text-xl">
 
+                                        <div class="reply text-blue-500 flex items-center">
+                                                <span class="material-symbols-outlined mr-1">globe</span>
+                                                <span>Everyone can reply</span>
+                                        </div>
+                                        <div class="w-[90%] h-[0.2px] bg-gray-700 my-3"></div>
+                                        <div class="blueicons flex gap-2 my-3 text-blue-400">
+                                                <span class="material-symbols-outlined cursor-pointer">image</span>
+                                                <span class="material-symbols-outlined cursor-pointer">gif</span>
+                                                <span class="material-symbols-outlined cursor-pointer">ballot</span>
+                                                <span
+                                                        class="material-symbols-outlined cursor-pointer">sentiment_satisfied</span>
+                                                <span
+                                                        class="material-symbols-outlined cursor-pointer">calendar_month</span>
+                                                <span class="material-symbols-outlined cursor-pointer">pin_drop</span>
+                                        </div>
+                                </div>
+                        </div>
+                        <hr>
+                        <div class="posts">
+                                <div class="post flex">
+                                        <div class="profile-img m-4">
+                                                <img src="https://pbs.twimg.com/profile_images/1629703174146736128/FyJ5XBWJ_normal.jpg"
+                                                        alt="" class="rounded-full">
+                                        </div>
+                                        <div class="content my-3">
+                                                <span class="font-bold text-white hover:underline cursor-pointer">
+                                                        Ovilash Jalui</span>
+                                                <span class="text-gray-500 cursor-pointer">@jaluiovilash . 7h</span>
+                                                <div class="caption">Hari Om</div>
+                                                <div class="post-img m-4 ml-0">
+                                                        <img class="rounded-xl" src="assets/Om (2).jpg" alt="">
+                                                </div>
+                                                <div
+                                                        class="icons flex justify-between p-1 mr-4 text-gray-500 cursor-pointer">
+                                                        <div class="icon flex items-center justify-center">
+                                                                <span
+                                                                        class="material-symbols-outlined">chat_bubble</span><span>1k</span>
+                                                        </div>
+                                                        <div class="icon flex items-center justify-center">
+                                                                <span
+                                                                        class="material-symbols-outlined">repeat</span><span>4.4k</span>
+                                                        </div>
+                                                        <div class="icon flex items-center justify-center">
+                                                                <span
+                                                                        class="material-symbols-outlined">favorite</span><span>60k</span>
+                                                        </div>
+                                                        <div class="icon flex items-center justify-center">
+                                                                <span
+                                                                        class="material-symbols-outlined">bar_chart</span><span>5.6M</span>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                </div>
+                        </div>
+                        <hr>
+                        <div class="posts">
+                                <div class="post flex">
+                                        <div class="profile-img m-4">
+                                                <img src="https://pbs.twimg.com/profile_images/1629703174146736128/FyJ5XBWJ_normal.jpg"
+                                                        alt="" class="rounded-full">
+                                        </div>
+                                        <div class="content my-3">
+                                                <span class="font-bold text-white hover:underline cursor-pointer">
+                                                        Ovilash Jalui</span>
+                                                <span class="text-gray-500 cursor-pointer">@jaluiovilash . 7h</span>
+                                                <div class="caption">Hari Om</div>
+                                                <div class="post-img m-4 ml-0">
+                                                        <img class="rounded-xl" src="assets/Om (2).jpg" alt="">
+                                                </div>
+                                                <div
+                                                        class="icons flex justify-between p-1 mr-4 text-gray-500 cursor-pointer">
+                                                        <div class="icon flex items-center justify-center">
+                                                                <span
+                                                                        class="material-symbols-outlined">chat_bubble</span><span>1k</span>
+                                                        </div>
+                                                        <div class="icon flex items-center justify-center">
+                                                                <span
+                                                                        class="material-symbols-outlined">repeat</span><span>4.4k</span>
+                                                        </div>
+                                                        <div class="icon flex items-center justify-center">
+                                                                <span
+                                                                        class="material-symbols-outlined">favorite</span><span>60k</span>
+                                                        </div>
+                                                        <div class="icon flex items-center justify-center">
+                                                                <span
+                                                                        class="material-symbols-outlined">bar_chart</span><span>5.6M</span>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                </div>
+                        </div>
+                        <hr>
+                        <div class="posts">
+                                <div class="post flex">
+                                        <div class="profile-img m-4">
+                                                <img src="https://pbs.twimg.com/profile_images/1629703174146736128/FyJ5XBWJ_normal.jpg"
+                                                        alt="" class="rounded-full">
+                                        </div>
+                                        <div class="content my-3">
+                                                <span class="font-bold text-white hover:underline cursor-pointer">
+                                                        Ovilash Jalui</span>
+                                                <span class="text-gray-500 cursor-pointer">@jaluiovilash . 7h</span>
+                                                <div class="caption">Hari Om</div>
+                                                <div class="post-img m-4 ml-0">
+                                                        <img class="rounded-xl" src="assets/Om (2).jpg" alt="">
+                                                </div>
+                                                <div
+                                                        class="icons flex justify-between p-1 mr-4 text-gray-500 cursor-pointer">
+                                                        <div class="icon flex items-center justify-center">
+                                                                <span
+                                                                        class="material-symbols-outlined">chat_bubble</span><span>1k</span>
+                                                        </div>
+                                                        <div class="icon flex items-center justify-center">
+                                                                <span
+                                                                        class="material-symbols-outlined">repeat</span><span>4.4k</span>
+                                                        </div>
+                                                        <div class="icon flex items-center justify-center">
+                                                                <span
+                                                                        class="material-symbols-outlined">favorite</span><span>60k</span>
+                                                        </div>
+                                                        <div class="icon flex items-center justify-center">
+                                                                <span
+                                                                        class="material-symbols-outlined">bar_chart</span><span>5.6M</span>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                </div>
+                        </div>
+                        <hr>
+                        <div class="posts">
+                                <div class="post flex">
+                                        <div class="profile-img m-4">
+                                                <img src="https://pbs.twimg.com/profile_images/1629703174146736128/FyJ5XBWJ_normal.jpg"
+                                                        alt="" class="rounded-full">
+                                        </div>
+                                        <div class="content my-3">
+                                                <span class="font-bold text-white hover:underline cursor-pointer">
+                                                        Ovilash Jalui</span>
+                                                <span class="text-gray-500 cursor-pointer">@jaluiovilash . 7h</span>
+                                                <div class="caption">Hari Om</div>
+                                                <div class="post-img m-4 ml-0">
+                                                        <img class="rounded-xl" src="assets/Om (2).jpg" alt="">
+                                                </div>
+                                                <div
+                                                        class="icons flex justify-between p-1 mr-4 text-gray-500 cursor-pointer">
+                                                        <div class="icon flex items-center justify-center">
+                                                                <span
+                                                                        class="material-symbols-outlined">chat_bubble</span><span>1k</span>
+                                                        </div>
+                                                        <div class="icon flex items-center justify-center">
+                                                                <span
+                                                                        class="material-symbols-outlined">repeat</span><span>4.4k</span>
+                                                        </div>
+                                                        <div class="icon flex items-center justify-center">
+                                                                <span
+                                                                        class="material-symbols-outlined">favorite</span><span>60k</span>
+                                                        </div>
+                                                        <div class="icon flex items-center justify-center">
+                                                                <span
+                                                                        class="material-symbols-outlined">bar_chart</span><span>5.6M</span>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                </div>
+                        </div>
+                        <hr>
+                        <div class="posts">
+                                <div class="post flex">
+                                        <div class="profile-img m-4">
+                                                <img src="https://pbs.twimg.com/profile_images/1629703174146736128/FyJ5XBWJ_normal.jpg"
+                                                        alt="" class="rounded-full">
+                                        </div>
+                                        <div class="content my-3">
+                                                <span class="font-bold text-white hover:underline cursor-pointer">
+                                                        Ovilash Jalui</span>
+                                                <span class="text-gray-500 cursor-pointer">@jaluiovilash . 7h</span>
+                                                <div class="caption">Hari Om</div>
+                                                <div class="post-img m-4 ml-0">
+                                                        <img class="rounded-xl" src="assets/Om (2).jpg" alt="">
+                                                </div>
+                                                <div
+                                                        class="icons flex justify-between p-1 mr-4 text-gray-500 cursor-pointer">
+                                                        <div class="icon flex items-center justify-center">
+                                                                <span
+                                                                        class="material-symbols-outlined">chat_bubble</span><span>1k</span>
+                                                        </div>
+                                                        <div class="icon flex items-center justify-center">
+                                                                <span
+                                                                        class="material-symbols-outlined">repeat</span><span>4.4k</span>
+                                                        </div>
+                                                        <div class="icon flex items-center justify-center">
+                                                                <span
+                                                                        class="material-symbols-outlined">favorite</span><span>60k</span>
+                                                        </div>
+                                                        <div class="icon flex items-center justify-center">
+                                                                <span
+                                                                        class="material-symbols-outlined">bar_chart</span><span>5.6M</span>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                </div>
+                        </div>
+                        <hr>
+                        <div class="posts">
+                                <div class="post flex">
+                                        <div class="profile-img m-4">
+                                                <img src="https://pbs.twimg.com/profile_images/1629703174146736128/FyJ5XBWJ_normal.jpg"
+                                                        alt="" class="rounded-full">
+                                        </div>
+                                        <div class="content my-3">
+                                                <span class="font-bold text-white hover:underline cursor-pointer">
+                                                        Ovilash Jalui</span>
+                                                <span class="text-gray-500 cursor-pointer">@jaluiovilash . 7h</span>
+                                                <div class="caption">Hari Om</div>
+                                                <div class="post-img m-4 ml-0">
+                                                        <img class="rounded-xl" src="assets/Om (2).jpg" alt="">
+                                                </div>
+                                                <div
+                                                        class="icons flex justify-between p-1 mr-4 text-gray-500 cursor-pointer">
+                                                        <div class="icon flex items-center justify-center">
+                                                                <span
+                                                                        class="material-symbols-outlined">chat_bubble</span><span>1k</span>
+                                                        </div>
+                                                        <div class="icon flex items-center justify-center">
+                                                                <span
+                                                                        class="material-symbols-outlined">repeat</span><span>4.4k</span>
+                                                        </div>
+                                                        <div class="icon flex items-center justify-center">
+                                                                <span
+                                                                        class="material-symbols-outlined">favorite</span><span>60k</span>
+                                                        </div>
+                                                        <div class="icon flex items-center justify-center">
+                                                                <span
+                                                                        class="material-symbols-outlined">bar_chart</span><span>5.6M</span>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                </div>
+                        </div>
+                        <hr>
+                        <div class="posts">
+                                <div class="post flex">
+                                        <div class="profile-img m-4">
+                                                <img src="https://pbs.twimg.com/profile_images/1629703174146736128/FyJ5XBWJ_normal.jpg"
+                                                        alt="" class="rounded-full">
+                                        </div>
+                                        <div class="content my-3">
+                                                <span class="font-bold text-white hover:underline cursor-pointer">
+                                                        Ovilash Jalui</span>
+                                                <span class="text-gray-500 cursor-pointer">@jaluiovilash . 7h</span>
+                                                <div class="caption">Hari Om</div>
+                                                <div class="post-img m-4 ml-0">
+                                                        <img class="rounded-xl" src="assets/Om (2).jpg" alt="">
+                                                </div>
+                                                <div
+                                                        class="icons flex justify-between p-1 mr-4 text-gray-500 cursor-pointer">
+                                                        <div class="icon flex items-center justify-center">
+                                                                <span
+                                                                        class="material-symbols-outlined">chat_bubble</span><span>1k</span>
+                                                        </div>
+                                                        <div class="icon flex items-center justify-center">
+                                                                <span
+                                                                        class="material-symbols-outlined">repeat</span><span>4.4k</span>
+                                                        </div>
+                                                        <div class="icon flex items-center justify-center">
+                                                                <span
+                                                                        class="material-symbols-outlined">favorite</span><span>60k</span>
+                                                        </div>
+                                                        <div class="icon flex items-center justify-center">
+                                                                <span
+                                                                        class="material-symbols-outlined">bar_chart</span><span>5.6M</span>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                </div>
+                        </div>
+                        <hr>
+                        <div class="posts">
+                                <div class="post flex">
+                                        <div class="profile-img m-4">
+                                                <img src="https://pbs.twimg.com/profile_images/1629703174146736128/FyJ5XBWJ_normal.jpg"
+                                                        alt="" class="rounded-full">
+                                        </div>
+                                        <div class="content my-3">
+                                                <span class="font-bold text-white hover:underline cursor-pointer">
+                                                        Ovilash Jalui</span>
+                                                <span class="text-gray-500 cursor-pointer">@jaluiovilash . 7h</span>
+                                                <div class="caption">Hari Om</div>
+                                                <div class="post-img m-4 ml-0">
+                                                        <img class="rounded-xl" src="assets/Om (2).jpg" alt="">
+                                                </div>
+                                                <div
+                                                        class="icons flex justify-between p-1 mr-4 text-gray-500 cursor-pointer">
+                                                        <div class="icon flex items-center justify-center">
+                                                                <span
+                                                                        class="material-symbols-outlined">chat_bubble</span><span>1k</span>
+                                                        </div>
+                                                        <div class="icon flex items-center justify-center">
+                                                                <span
+                                                                        class="material-symbols-outlined">repeat</span><span>4.4k</span>
+                                                        </div>
+                                                        <div class="icon flex items-center justify-center">
+                                                                <span
+                                                                        class="material-symbols-outlined">favorite</span><span>60k</span>
+                                                        </div>
+                                                        <div class="icon flex items-center justify-center">
+                                                                <span
+                                                                        class="material-symbols-outlined">bar_chart</span><span>5.6M</span>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                </div>
+                        </div>
+                        <hr>
                 </div>
 
                 <div class="third w-full">
@@ -147,7 +557,7 @@
                                                 Follow
                                         </div>
                                 </div>
-                                <div class="text-blue-600 my-5 mx-3 px-3 cursor-pointer">Show More</div>
+                                <div class="text-blue-600 my-5 mx-3 cursor-pointer text-xs">Show More</div>
                         </div>
                 </div>
         </div>
