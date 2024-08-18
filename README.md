@@ -1,7 +1,7 @@
 # Twitter UI Clone
 
 ### Home Page
-![Home Page](assets/home-page.png)
+<p align="center"><img src="assets/home-page.png" alt="home-page"></p>
 
 This is a simple clone of the Twitter user interface built using HTML and TailwindCSS. This project serves as my first venture into using TailwindCSS for styling.
 
