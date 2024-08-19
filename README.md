@@ -12,7 +12,6 @@ This is a simple clone of the Twitter user interface built using HTML and Tailwi
 - [Features](#features)
 - [Technologies Used](#technologies-used)
 - [Setup](#setup)
-- [Screenshots](#screenshots)
 - [Challenges and Learning](#challenges-and-learning)
 - [License](#license)
 
